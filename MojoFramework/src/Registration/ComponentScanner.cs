@@ -23,7 +23,7 @@ public static class ComponentScanner
             var scopeAttribute = implementation.GetCustomAttribute<ScopeAttribute>();
 
             // Assign singleton scope by default
-            var scope = scopeAttribute?.Scope ?? PredefinedScope.Singleton;
+            var scope = scopeAttribute?.scope ?? PredefinedScope.Singleton;
 
             /*
              * Scope of definition is currently dictated by implementation ScopeAttribute

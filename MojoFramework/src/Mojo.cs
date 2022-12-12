@@ -35,7 +35,7 @@ public static class Mojo
 
     private static async Task RunHost(IHost host)
     {
-        Console.WriteLine(Resources.Banner);
+        Console.WriteLine(Resources.BANNER);
 
         // Build & start the application host
         await host.StartAsync();

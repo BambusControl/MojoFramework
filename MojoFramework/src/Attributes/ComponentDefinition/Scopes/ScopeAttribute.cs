@@ -8,10 +8,10 @@ namespace MojoFramework.Attributes.ComponentDefinition.Scopes;
 [AttributeUsage(AttributeTargets.Class, Inherited = false)]
 public class ScopeAttribute : Attribute
 {
-	public readonly PredefinedScope Scope;
+	public readonly PredefinedScope scope;
 
 	public ScopeAttribute(PredefinedScope scope)
 	{
-		Scope = scope;
+		this.scope = scope;
 	}
 }
