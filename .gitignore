@@ -1,0 +1,6 @@
+### JetBrains Rider ###
+/.idea
+
+### Build Outputs ###
+**/obj
+**/bin
