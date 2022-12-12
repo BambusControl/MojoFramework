@@ -8,11 +8,11 @@ namespace MojoFramework;
 
 public sealed class StartupHostBuilder
 {
-    private readonly Assembly _scanAssembly;
+    private readonly Assembly scanAssembly;
 
     public StartupHostBuilder(Assembly scanAssembly)
     {
-        _scanAssembly = scanAssembly;
+        this.scanAssembly = scanAssembly;
     }
 
     public IHost BuildHost(string[]? arguments = null)
@@ -21,7 +21,7 @@ public sealed class StartupHostBuilder
             .CreateDefaultBuilder(arguments)
             .ConfigureLogging(ConfigureLogging)
             .ConfigureServices(MojoConfigure)
-            .UseComponentScanning(_scanAssembly)
+            .UseComponentScanning(scanAssembly)
             .Build();
     }
 
@@ -35,6 +35,6 @@ public sealed class StartupHostBuilder
 
     private void MojoConfigure(HostBuilderContext context, IServiceCollection services)
     {
-        services.AddSingleton(_scanAssembly);
+        services.AddSingleton(scanAssembly);
     }
 }

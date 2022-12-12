@@ -2,7 +2,7 @@
 
 internal static class Resources
 {
-    public const string Banner = @"
+    public const string BANNER = @"
     __  ___                     ___
    /  |/  /___  __  ______     /   |  ____  ____
   / /|_/ / __ \/ / / / __ \   / /| | / __ \/ __ \
