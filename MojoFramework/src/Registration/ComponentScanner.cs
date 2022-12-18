@@ -25,24 +25,18 @@ public static class ComponentScanner
             // Assign singleton scope by default
             var scope = scopeAttribute?.scope ?? PredefinedScope.Singleton;
 
-            /*
-             * Scope of definition is currently dictated by implementation ScopeAttribute
-             */
-
-            // Provide component implementation
+			// Provide component implementation
             AddComponent(services, scope, implementation);
 
             // Bind component implementation to component interface
-            AddComponentDefinitions(services, scope, implementation);
+            AddComponentInterface(services, scope, implementation);
         }
     }
 
-    private static void AddComponentDefinitions(IServiceCollection services, PredefinedScope scope, Type implementation)
+    private static void AddComponentInterface(IServiceCollection services, PredefinedScope scope, Type implementation)
     {
-        // Get copmonent interfaces
-        var definitions = implementation.GetInterfaces()
-            .WithCustomAttribute<ComponentInterfaceAttribute, Type>()
-            .Where(@interface => @interface.HasCustomAttribute<ComponentInterfaceAttribute>());
+        // Get component interfaces
+		var definitions = implementation.GetInterfaces();
 
         foreach (var definition in definitions)
         {
