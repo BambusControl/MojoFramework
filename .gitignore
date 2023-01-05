@@ -1,6 +1,12 @@
 ### JetBrains Rider ###
 /.idea
 
+## Visual Studio ###
+/.vs
+
 ### Build Outputs ###
 **/obj
 **/bin
+
+### Other ###
+/.ignore
