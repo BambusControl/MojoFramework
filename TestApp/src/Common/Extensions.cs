@@ -1,4 +1,6 @@
-﻿namespace TestApp.Common;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace TestApp.Common;
 
 public static class Extensions
 {
@@ -8,5 +10,12 @@ public static class Extensions
 		{
 			action.Invoke(item);
 		}
+	}
+
+	[SuppressMessage("ReSharper", "NullableWarningSuppressionIsUsed")]
+	public static IEnumerable<T> WhereNotDefault<T>(this IEnumerable<T?> enumerable)
+	{
+		return enumerable.Where(value => !Equals(default(T), value))
+			.Select(value => (T) value!);
 	}
 }
