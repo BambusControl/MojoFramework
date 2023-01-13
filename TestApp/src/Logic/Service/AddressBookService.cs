@@ -6,7 +6,7 @@ using TestApp.Logic.Repository;
 
 namespace TestApp.Logic.Service;
 
-[Component]
+// [Component]
 public sealed class AddressBookService
 {
 	private readonly MessageRepository msgRepo;
