@@ -12,7 +12,6 @@
         <PackageLicense>https://spdx.org/licenses/Apache-2.0.html</PackageLicense>
         <RepositoryUrl>https://github.com/BambusControl/MojoFramework.git</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Version>0.0.1</Version>
         <PackageReleaseNotes>Initial pre-release</PackageReleaseNotes>
         <PackageReadmeFile>README.md</PackageReadmeFile>
