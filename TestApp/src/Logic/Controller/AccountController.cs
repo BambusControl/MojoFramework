@@ -1,4 +1,4 @@
-﻿using MojoFramework.Attributes;
+﻿using MojoFramework.Attributes.Configuration;
 using TestApp.Data.DTO.Response;
 using TestApp.Logic.Service;
 

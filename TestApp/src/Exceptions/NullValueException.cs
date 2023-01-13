@@ -7,7 +7,7 @@ public class NullValueException : UnexpectedValueException
 	{
 	}
 
-	public NullValueException(string propertyName, Exception? innerException) 
+	public NullValueException(string propertyName, Exception? innerException)
 		: base($"Expected a non null value '{propertyName}'", innerException)
 	{
 	}

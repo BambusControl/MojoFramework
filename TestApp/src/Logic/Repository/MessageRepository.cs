@@ -1,4 +1,4 @@
-﻿using MojoFramework.Attributes;
+﻿using MojoFramework.Attributes.Configuration;
 using TestApp.Data.Entity;
 
 namespace TestApp.Logic.Repository;
@@ -13,16 +13,21 @@ public sealed class MessageRepository
 	{
 		idSeq = 0;
 		var now = DateTime.Now;
-		messages = new List<MessageEntity>()
+		messages = new List<MessageEntity>
 		{
-			new(GenerateId(), "Scarlett", "Josh", "Hello", now - new TimeSpan(18, 10, 23)),
-			new(GenerateId(), "Scarlett", "Josh", "How are you doing", now - new TimeSpan(18, 10, 18)),
-			new(GenerateId(), "Josh", "Scarlett", "I'm great", now - new TimeSpan(18, 8, 53)),
-			new(GenerateId(), "Scarlett", "Nancy", "Hello from the other side", now - new TimeSpan(10, 2, 11)),
+			new(GenerateId(), "Scarlett", "Josh", "Hello", now - new TimeSpan(hours: 18, minutes: 10, seconds: 23)),
+			new(GenerateId(), "Scarlett", "Josh", "How are you doing",
+				now - new TimeSpan(hours: 18, minutes: 10, seconds: 18)),
+			new(GenerateId(), "Josh", "Scarlett", "I'm great", now - new TimeSpan(hours: 18, minutes: 8, seconds: 53)),
+			new(GenerateId(), "Scarlett", "Nancy", "Hello from the other side",
+				now - new TimeSpan(hours: 10, minutes: 2, seconds: 11)),
 		};
 	}
 
-	private int GenerateId() => idSeq++;
+	private int GenerateId()
+	{
+		return idSeq++;
+	}
 
 	public MessageEntity? GetById(int id)
 	{

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Immutable;
-using MojoFramework.Attributes;
+using MojoFramework.Attributes.Configuration;
 using TestApp.Common;
 using TestApp.Data.Entity;
 using TestApp.Data.Model;
@@ -11,8 +11,8 @@ namespace TestApp.Logic.Service;
 [Component]
 public sealed class MessageService
 {
-	private readonly PersonRepository personRepo;
 	private readonly MessageRepository msgRepo;
+	private readonly PersonRepository personRepo;
 
 	public MessageService(
 		PersonRepository personRepo,

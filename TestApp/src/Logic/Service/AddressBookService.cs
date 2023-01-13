@@ -1,4 +1,4 @@
-﻿using MojoFramework.Attributes;
+﻿using MojoFramework.Attributes.Configuration;
 using TestApp.Common;
 using TestApp.Data.Model;
 using TestApp.Exceptions;
@@ -9,8 +9,8 @@ namespace TestApp.Logic.Service;
 [Component]
 public sealed class AddressBookService
 {
-	private readonly PersonRepository personRepo;
 	private readonly MessageRepository msgRepo;
+	private readonly PersonRepository personRepo;
 
 	public AddressBookService(
 		PersonRepository personRepo,

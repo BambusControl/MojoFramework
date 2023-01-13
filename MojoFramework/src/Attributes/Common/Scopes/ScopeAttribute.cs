@@ -1,9 +1,7 @@
-﻿using MojoFramework.Attributes.Common;
-
-namespace MojoFramework.Attributes.ComponentDefinition.Scopes;
+﻿namespace MojoFramework.Attributes.Common.Scopes;
 
 /// <summary>
-/// Specifies the scope of a component
+///     Specifies the scope of a component
 /// </summary>
 [AttributeUsage(AttributeTargets.Class, Inherited = false)]
 public class ScopeAttribute : Attribute
