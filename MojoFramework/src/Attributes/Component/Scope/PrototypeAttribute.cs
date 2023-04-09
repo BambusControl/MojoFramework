@@ -1,12 +1,12 @@
 ﻿namespace MojoFramework.Attributes.Component.Scope;
 
 /// <summary>
-///     Specifies the scope of this component as Transient
+///     Specifies the scope of this component as Prototype
 /// </summary>
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, Inherited = false)]
-public sealed class TransientAttribute : ScopeAttribute
+public sealed class PrototypeAttribute : ScopeAttribute
 {
-	public TransientAttribute() : base(PredefinedScope.Transient)
+	public PrototypeAttribute() : base(PredefinedScope.Prototype)
 	{
 	}
 }

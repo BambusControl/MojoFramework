@@ -4,5 +4,5 @@ public enum PredefinedScope
 {
 	Singleton,
 	Scoped,
-	Transient,
+	Prototype,
 }

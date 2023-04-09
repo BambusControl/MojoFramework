@@ -9,7 +9,7 @@ internal static class LifetimeScopeExtensions
 	{
 		PredefinedScope.Singleton => ServiceLifetime.Singleton,
 		PredefinedScope.Scoped => ServiceLifetime.Scoped,
-		PredefinedScope.Transient => ServiceLifetime.Transient,
+		PredefinedScope.Prototype => ServiceLifetime.Transient,
 		_ => throw new ArgumentOutOfRangeException(nameof(predefinedScope), predefinedScope, null)
 	};
 
@@ -17,7 +17,7 @@ internal static class LifetimeScopeExtensions
 	{
 		ServiceLifetime.Singleton => PredefinedScope.Singleton,
 		ServiceLifetime.Scoped => PredefinedScope.Scoped,
-		ServiceLifetime.Transient => PredefinedScope.Transient,
+		ServiceLifetime.Transient => PredefinedScope.Prototype,
 		_ => throw new ArgumentOutOfRangeException(nameof(serviceLifetime), serviceLifetime, null)
 	};
 }

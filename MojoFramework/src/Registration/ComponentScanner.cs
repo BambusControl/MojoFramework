@@ -73,7 +73,7 @@ public static class ComponentScanner
 				break;
 			}
 
-			case PredefinedScope.Transient:
+			case PredefinedScope.Prototype:
 			{
 				services.AddTransient(type);
 				break;
@@ -107,7 +107,7 @@ public static class ComponentScanner
 				break;
 			}
 
-			case PredefinedScope.Transient:
+			case PredefinedScope.Prototype:
 			{
 				services.AddTransient(type, implementationFactory);
 				break;

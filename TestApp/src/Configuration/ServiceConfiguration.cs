@@ -10,7 +10,7 @@ namespace TestApp.Configuration;
 public class ServiceConfiguration
 {
 
-	[Instance, Transient]
+	[Instance, Prototype]
 	public AddressBookService AddressBookServiceInstance(PersonRepository personRepo, MessageRepository msgRepo)
 	{
 		return new AddressBookService(personRepo, msgRepo);
