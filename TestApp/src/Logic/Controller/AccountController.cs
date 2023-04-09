@@ -5,7 +5,7 @@ using TestApp.Logic.Service;
 
 namespace TestApp.Logic.Controller;
 
-[Component]
+[Controller]
 public class AccountController
 {
 	private readonly AddressBookService addressService;

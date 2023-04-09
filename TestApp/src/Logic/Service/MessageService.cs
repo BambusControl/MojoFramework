@@ -9,7 +9,7 @@ using TestApp.Logic.Repository;
 
 namespace TestApp.Logic.Service;
 
-[Component]
+[Service]
 public sealed class MessageService
 {
 	private readonly MessageRepository msgRepo;

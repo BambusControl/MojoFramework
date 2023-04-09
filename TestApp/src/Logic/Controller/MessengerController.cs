@@ -6,18 +6,15 @@ using TestApp.Logic.Service;
 
 namespace TestApp.Logic.Controller;
 
-[Component]
+[Controller]
 public class MessengerController
 {
-	private readonly AddressBookService addressService;
 	private readonly MessageService messageService;
 
 	public MessengerController(
-		AddressBookService addressService,
 		MessageService messageService
 	)
 	{
-		this.addressService = addressService;
 		this.messageService = messageService;
 	}
 

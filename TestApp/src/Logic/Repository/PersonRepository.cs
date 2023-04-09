@@ -4,7 +4,7 @@ using TestApp.Data.Entity;
 
 namespace TestApp.Logic.Repository;
 
-[Component]
+[Repository]
 public sealed class PersonRepository
 {
 	private readonly List<PersonEntity> people;
