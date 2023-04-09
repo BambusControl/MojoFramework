@@ -20,8 +20,12 @@ public class Program
 		Mojo.Run<Program>(args);
 	}
 
+	/*
+	 * Marks the entrypoint for application.
+	 * Parameters are injected automatically.
+	 */
 	[MojoStart]
-	private static void DoStuff(AccountController account, MessengerController messenger)
+	public static void Test(AccountController account, MessengerController messenger)
 	{
 		const string userA = "Josh";
 		const ConsoleColor clA = ConsoleColor.Cyan;

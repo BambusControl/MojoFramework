@@ -4,6 +4,7 @@ using Microsoft.Extensions.Hosting;
 using MojoFramework.Attributes;
 using MojoFramework.Common;
 using MojoFramework.Common.Extensions;
+using MojoFramework.Exceptions;
 
 namespace MojoFramework;
 
@@ -51,17 +52,38 @@ public static class Mojo
 	{
 		var assemblyTypes = services
 			.GetRequiredService<Assembly>()
-			.GetTypes();
+			.ExportedTypes;
 
-		var startMethod = assemblyTypes
-			.WithCustomAttribute<MojoApplicationAttribute>().First()
-			.GetMethods(BindingFlags.Static | BindingFlags.Public)
-			.WithCustomAttribute<MojoStartAttribute>().First();
+		var mojoStart = FindMojoStart(assemblyTypes);
 
-		var parameters = startMethod.GetParameters()
+		var parameters = mojoStart.GetParameters()
 			.Select(p => services.GetRequiredService(p.ParameterType))
 			.ToArray();
 
-		_ = startMethod.Invoke(obj: null, parameters);
+		_ = mojoStart.Invoke(obj: null, parameters);
+	}
+
+	private static MethodInfo FindMojoStart(IEnumerable<Type> assemblyTypes)
+	{
+		var mojoApp = assemblyTypes
+			.WithCustomAttribute<MojoApplicationAttribute>()
+			.SingleOrDefault();
+
+		if (mojoApp == null)
+		{
+			throw new MojoStartException($"Exactly one type with {nameof(MojoApplicationAttribute)} is required.");
+		}
+
+		var mojoStart = mojoApp
+			.GetMethods(BindingFlags.Static | BindingFlags.Public)
+			.WithCustomAttribute<MojoStartAttribute>()
+			.SingleOrDefault();
+
+		if (mojoStart == null)
+		{
+			throw new MojoStartException($"Exactly one method with {nameof(MojoApplicationAttribute)} is required.");
+		}
+
+		return mojoStart;
 	}
 }
