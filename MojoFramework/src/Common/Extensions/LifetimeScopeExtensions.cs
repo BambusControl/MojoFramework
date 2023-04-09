@@ -1,5 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
-using MojoFramework.Attributes.Common;
+using MojoFramework.Attributes.Component.Scope;
 
 namespace MojoFramework.Common.Extensions;
 

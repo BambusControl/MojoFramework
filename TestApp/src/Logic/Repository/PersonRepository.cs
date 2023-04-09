@@ -1,4 +1,5 @@
-﻿using MojoFramework.Attributes.Configuration;
+﻿using MojoFramework.Attributes.Component;
+using MojoFramework.Attributes.Configuration;
 using TestApp.Data.Entity;
 
 namespace TestApp.Logic.Repository;

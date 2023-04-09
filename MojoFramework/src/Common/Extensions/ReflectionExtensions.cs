@@ -1,7 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Formats.Asn1;
 using System.Reflection;
-using MojoFramework.Attributes.Common.Scopes;
 
 namespace MojoFramework.Common.Extensions;
 

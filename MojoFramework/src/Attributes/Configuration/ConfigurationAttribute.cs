@@ -1,3 +1,6 @@
+using MojoFramework.Attributes.Component;
+using MojoFramework.Attributes.Instance;
+
 namespace MojoFramework.Attributes.Configuration;
 
 /// <summary>

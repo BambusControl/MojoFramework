@@ -1,4 +1,4 @@
-﻿namespace MojoFramework.Attributes.Common;
+﻿namespace MojoFramework.Attributes.Component.Scope;
 
 public enum PredefinedScope
 {

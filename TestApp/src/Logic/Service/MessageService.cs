@@ -1,4 +1,5 @@
 ﻿using System.Collections.Immutable;
+using MojoFramework.Attributes.Component;
 using MojoFramework.Attributes.Configuration;
 using TestApp.Common;
 using TestApp.Data.Entity;

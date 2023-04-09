@@ -1,4 +1,4 @@
-﻿namespace MojoFramework.Attributes.Common.Scopes;
+﻿namespace MojoFramework.Attributes.Component.Scope;
 
 /// <summary>
 ///     Specifies the scope of this component as Singleton

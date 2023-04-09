@@ -1,4 +1,4 @@
-﻿namespace MojoFramework.Attributes.Configuration;
+﻿namespace MojoFramework.Attributes.Component;
 
 /// <summary>
 ///     Makes this a MojoFramework injectable component.

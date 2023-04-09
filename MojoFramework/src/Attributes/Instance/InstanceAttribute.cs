@@ -1,4 +1,4 @@
-namespace MojoFramework.Attributes.Configuration;
+namespace MojoFramework.Attributes.Instance;
 
 /// <summary>
 ///     Makes this a factory method for MojoFramework injectable instances.

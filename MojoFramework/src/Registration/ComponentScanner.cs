@@ -1,9 +1,10 @@
 ﻿using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using MojoFramework.Attributes.Common;
-using MojoFramework.Attributes.Common.Scopes;
+using MojoFramework.Attributes.Component;
+using MojoFramework.Attributes.Component.Scope;
 using MojoFramework.Attributes.Configuration;
+using MojoFramework.Attributes.Instance;
 using MojoFramework.Common.Extensions;
 using MojoFramework.Exceptions;
 
