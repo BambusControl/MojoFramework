@@ -1,7 +1,7 @@
 ﻿namespace TestApp.Exceptions;
 
 /// <summary>
-/// Base class for all user defined exceptions in this app
+///     Base class for all user defined exceptions in this app
 /// </summary>
 public abstract class TestAppException : Exception
 {

@@ -1,5 +1,5 @@
-﻿using System.Collections.Immutable;
-using MojoFramework.Attributes;
+﻿using MojoFramework.Attributes.Component;
+using MojoFramework.Attributes.Configuration;
 using TestApp.Data.DTO.Response;
 using TestApp.Data.Model;
 using TestApp.Logic.Service;

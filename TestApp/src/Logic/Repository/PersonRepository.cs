@@ -1,4 +1,5 @@
-﻿using MojoFramework.Attributes;
+﻿using MojoFramework.Attributes.Component;
+using MojoFramework.Attributes.Configuration;
 using TestApp.Data.Entity;
 
 namespace TestApp.Logic.Repository;
@@ -12,9 +13,9 @@ public sealed class PersonRepository
 	{
 		people = new List<PersonEntity>
 		{
-			new("Josh", new DateOnly(1987, 2, 12)),
-			new("Scarlett", new DateOnly(1992, 10, 7)),
-			new("Nancy", new DateOnly(1978, 6, 25)),
+			new("Josh", new DateOnly(year: 1987, month: 2, day: 12)),
+			new("Scarlett", new DateOnly(year: 1992, month: 10, day: 7)),
+			new("Nancy", new DateOnly(year: 1978, month: 6, day: 25)),
 		};
 	}
 

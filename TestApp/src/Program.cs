@@ -1,5 +1,4 @@
-﻿using System.Drawing;
-using System.Text.Json;
+﻿using System.Text.Json;
 using MojoFramework;
 using MojoFramework.Attributes;
 using TestApp.Data.Model;
@@ -10,7 +9,7 @@ namespace TestApp;
 [MojoApplication]
 public class Program
 {
-	private static readonly JsonSerializerOptions JsonOptions = new JsonSerializerOptions
+	private static readonly JsonSerializerOptions JsonOptions = new()
 	{
 		// WriteIndented = true,
 	};
@@ -46,7 +45,7 @@ public class Program
 		Console.ResetColor();
 		Console.WriteLine();
 
-		Console.WriteLine($"== Sending messages");
+		Console.WriteLine("== Sending messages");
 		Console.ForegroundColor = clAd;
 		Write(messenger.WriteMessage(new MessageDraftModel(userA, userB, "How do you do")));
 		Console.ForegroundColor = clBd;
