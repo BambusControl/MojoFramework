@@ -55,7 +55,7 @@ public static class Mojo
 
 		var startMethod = assemblyTypes
 			.WithCustomAttribute<MojoApplicationAttribute>().First()
-			.GetMethods(BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic)
+			.GetMethods(BindingFlags.Static | BindingFlags.Public)
 			.WithCustomAttribute<MojoStartAttribute>().First();
 
 		var parameters = startMethod.GetParameters()
